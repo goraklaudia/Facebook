@@ -1,0 +1,33 @@
+.container {
+    border: 1px solid black;
+    background: rgb(229, 229, 229);
+    border-radius: 5px;
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -400px;
+    padding: 20px;
+}
+
+.post {
+    border: 1px solid rgb(128, 128, 128);
+    background: white;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.postTitle {
+    border-bottom: 0.8px solid gray;
+    padding-bottom: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.postBody {
+    padding-top: 3px;
+
+}
