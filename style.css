@@ -2,6 +2,10 @@ body {
     background: rgba(233, 233, 233, 0.558);
 }
 
+.container {
+    /* border: 2px solid black; */
+    padding: 10px;
+}
 .header {
     color: blue;
     text-align: center;
@@ -11,17 +15,12 @@ body {
     padding: 10px;
 }
 
-.container {
-    border-radius: 5px;
-    width: 50vw;
-    position: absolute;
+.post {
     left: 50%;
     right: 50%;
-    margin-left: -400px;
-    padding: 20px;
-}
-
-.post {
+    margin-left: 500px;
+    margin-top: 30px;
+    width: 550px;
     border: 1px outset white;
     background: white;
     border-radius: 4px;
@@ -34,6 +33,7 @@ body {
     /* border-bottom: 0.8px solid gray; */
     padding-bottom: 10px;
     font-weight: bold;
+    font-size: 20px;
 
 }
 

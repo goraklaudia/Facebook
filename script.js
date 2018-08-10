@@ -5,9 +5,13 @@ $(document).ready(function(){
         type: 'get',
         success: function(data) {
             $(data).each(function (i, v) {
-                $('#title').text(v.title);
-                $('#body').text(v.body);
-            })
+                $('.container').append(
+                    '<div class="post">'+
+                        '<div class="postTitle" id= "title">'+ v.title +'</div>'+
+                        '<div class="postBody" id= "body">'+ v.body +'</div>'+
+                    '</div> ');
+                console.log('Success ');
+            });
             console.log('Success ');
         }
     })
