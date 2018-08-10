@@ -1,6 +1,17 @@
+body {
+    background: rgba(233, 233, 233, 0.558);
+}
+
+.header {
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    padding: 10px;
+}
+
 .container {
-    border: 1px solid black;
-    background: rgb(229, 229, 229);
     border-radius: 5px;
     width: 50vw;
     position: absolute;
@@ -11,23 +22,23 @@
 }
 
 .post {
-    border: 1px solid rgb(128, 128, 128);
+    border: 1px outset white;
     background: white;
-    border-radius: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    border-radius: 4px;
+    padding: 10px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .postTitle {
-    border-bottom: 0.8px solid gray;
-    padding-bottom: 3px;
+    /* border-bottom: 0.8px solid gray; */
+    padding-bottom: 10px;
     font-weight: bold;
-    font-size: 20px;
+
 }
 
 .postBody {
     padding-top: 3px;
-
+    font-size: 15px;
+    color: rgb(67, 67, 67);
 }

@@ -4,20 +4,11 @@ $(document).ready(function(){
         dataType:'json',
         type: 'get',
         success: function(data) {
-            console.log('Success');
+            $(data).each(function (i, v) {
+                $('#title').text(v.title);
+                $('#body').text(v.body);
+            })
+            console.log('Success ');
         }
-    }).then(function(data) {
-        $('#title').text(data.title);
-        $('#body').text(data.body);
     })
 });
-
-/*
-    success: function(data) {
-        $(data).each(function(index, value) {
-            
-        });
-    }
-*/
-
-
