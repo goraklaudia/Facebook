@@ -4,11 +4,9 @@ $(document).ready(function(){
         dataType:'json',
         type: 'get',
         success: function(data) {
-            $(data).each(function (i, v) {
-                $('.container').append('<li><div class="postTitle">'+ v.title +'</div>'+ v.body +'</li> </br></br>');
-                console.log('Success ');
+            $(data).each(function (index, value) {
+                $('.container').append('<li><div class="postTitle">'+ value.title +'</div>'+ value.body +'</li> </br></br>');
             });
-            console.log('Success ');
         }
     })
 });
