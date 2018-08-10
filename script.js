@@ -5,11 +5,7 @@ $(document).ready(function(){
         type: 'get',
         success: function(data) {
             $(data).each(function (i, v) {
-                $('.container').append(
-                    '<div class="post">'+
-                        '<div class="postTitle" id= "title">'+ v.title +'</div>'+
-                        '<div class="postBody" id= "body">'+ v.body +'</div>'+
-                    '</div> ');
+                $('.container').append('<li><div class="postTitle">'+ v.title +'</div>'+ v.body +'</li> </br></br>');
                 console.log('Success ');
             });
             console.log('Success ');
