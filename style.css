@@ -1,0 +1,22 @@
+body {
+    background: rgba(233, 233, 233, 0.558);
+}
+
+.container {
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.header {
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.postTitle {
+    font-weight:bold; 
+    font-style: italic;
+}
