@@ -1,6 +1,8 @@
-export function Post() {
+export class Post {
 
-    function getPost() {
+    constructor () {}
+
+    getPost() {
         let output = $('.container');
         
         $.ajax({
@@ -17,9 +19,4 @@ export function Post() {
             }
         })
     }
-
-    return {
-        getPost: getPost
-    }
-
 };

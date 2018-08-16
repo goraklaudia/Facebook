@@ -1,5 +1,5 @@
 import {Post} from './modules/post.js';
 
-var post = Post();
+var post = new Post();
 post.getPost();
 
