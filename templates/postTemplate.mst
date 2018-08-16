@@ -1,0 +1,7 @@
+{{#title}}
+    <li>
+        <div class="postTitle"> {{title}} </div>
+        {{body}}
+    </li>
+{{/title}}
+</br>
