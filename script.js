@@ -1,5 +1,5 @@
-import {Post as post} from './modules/post.js';
+import {Post} from './modules/post.js';
 
-function doOnLoad() {
-    post.getPost();
-}
+var post = Post();
+post.getPost();
+

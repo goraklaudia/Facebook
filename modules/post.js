@@ -1,4 +1,4 @@
-function Post() {
+export function Post() {
 
     function getPost() {
         let output = $('.container');
