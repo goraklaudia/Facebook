@@ -1,6 +1,7 @@
 # Facebook application.
 
-To open application install globaly server node.js
+To open application install global NodeJS server 
+[link](https://www.npmjs.com/package/http-server)
 
 > npm install http-server -g
 
