@@ -12,7 +12,15 @@ export class Post {
     };
 
     getPost() {
-
+        new Promise((resolve, reject) => {
+            // when success, resolve
+            let value = 'success';
+            resolve(value);
+           
+            // when an error occurred, reject
+            reject(new Error('Something happened!'));
+          });
+          
         $.ajax({
             url: 'https://jsonplaceholder.typicode.com/posts',
             dataType:'json',
