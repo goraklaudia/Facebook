@@ -12,12 +12,12 @@ export class Post {
     };
 
     getPost() {
-        
+
         $.ajax({
             url: 'https://jsonplaceholder.typicode.com/posts',
             dataType:'json',
             type: 'get',
-            success: this.successGet.bind(this)
+            success: this.successGet
         })
     }
 };
