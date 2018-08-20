@@ -1,31 +1,34 @@
 export class Post {
+    //  data:object;
+    // var data1: object;
 
     successGet(data) {
         let output = $('.container');
-
+        console.log(this);
             $.get('/templates/postTemplate.mst', function(template){
                 $(data).each(function (index, value) {
                     let result = Mustache.render(template, value);
                     output.append(result);
                 });
             }); 
-    };
+            console.log(this.data1);
 
+    };
+   
     getPost() {
-        new Promise((resolve, reject) => {
-            // when success, resolve
-            let value = 'success';
-            resolve(value);
-           
-            // when an error occurred, reject
-            reject(new Error('Something happened!'));
-          });
-          
+
         $.ajax({
             url: 'https://jsonplaceholder.typicode.com/posts',
             dataType:'json',
             type: 'get',
-            success: this.successGet
-        })
+            success: function (data){
+                this.data1 = data;
+                this.successGet(this.data1);
+            }
+
+            // success: this.successGet
+        });
+        // console.log(Post.data);
     }
+    
 };
