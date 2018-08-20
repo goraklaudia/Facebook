@@ -1,3 +1,6 @@
+var module = function(){
+
+
 function successGet(data) {
         let output = $('.container');
         console.log(this);
@@ -17,9 +20,13 @@ function getPost() {
             type: 'get',
             success: function (data){
                 this.data1 = data;
-                successGet(this.data1);
+                this.successGet(this.data1);
             }
         });
 };
-
-getPost();
+return {
+    get:getPost,
+    render:successGet
+}
+}();
+module.get();
