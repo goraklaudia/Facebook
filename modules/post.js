@@ -21,14 +21,11 @@ export class Post {
             url: 'https://jsonplaceholder.typicode.com/posts',
             dataType:'json',
             type: 'get',
-            success: function (data){
+            success: (data)=>{
                 this.data1 = data;
                 this.successGet(this.data1);
             }
-
-            // success: this.successGet
         });
-        // console.log(Post.data);
     }
     
 };
