@@ -1,4 +1,7 @@
-import {Post} from './modules/post.js';
+import {Scroller} from './modules/scroller.js';
 
-let post = new Post();
-post.getPost();
+let scroller = new Scroller();
+scroller.loadPost();
+
+
+
