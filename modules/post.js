@@ -21,7 +21,7 @@ export class Post {
             type: 'get',
             success: (data)=>{
                 this.data1=data;
-                this.render(this.data1);
+                this.render([this.data1[0], this.data1[1]]);
             }
         });
     }

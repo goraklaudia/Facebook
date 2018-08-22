@@ -4,16 +4,19 @@ export class Scroller {
 
     loadPost() {
             let post = new Post();
-            post.get();
+            let containerHeight = 0;
+            
+            do {
+                post.get();
+                containerHeight += $('.container').innerHeight();
+            }while(containerHeight < $(window).height());
 
             $(window).scroll(function() {
-            var subtraction = $(document).height() - $(window).height();
-            var windowScroll = Math.floor($(window).scrollTop());
+                var subtraction = $(document).height() - $(window).height();
+                var windowScroll = Math.floor($(window).scrollTop());
 
-            if (subtraction == (windowScroll || (windowScroll +1)))
-                post.get();
-                
+                if([windowScroll, (windowScroll +1)].indexOf(subtraction) != -1)
+                    post.get();
             });
     }
-
 }
