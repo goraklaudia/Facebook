@@ -7,25 +7,19 @@ export class Scroller {
         let containerHei = 0;
         console.log($(window).height());
 
-        new Promise((resolve, reject) => {
-            resolve(post.get());
-        }).then((data)=> {
-            console.log("dddd - " + data);
-            containerHei = data;
-            console.log("dd - " + containerHei);
-
-            // do{
-            for(let i=0; i<5; i++)
-                new Promise((resolve, reject) => {
-                    resolve(post.get());
-                }).then((data)=> {
-                    containerHei = data;
-                    console.log("dd - " + containerHei);
-                });
-            // }while(containerHei< $(window).height());
-
-            
-        });
+        let promise = post.get().then((data) => {
+           
+            post.get().then((data1)=> {
+                containerHei = data1;
+                for(let i=0; i<10; i++)
+                {
+                    console.log("i - " +i);
+                }
+                console.log("con war - " + containerHei);
+            })
+            console.log("ble - " + data);
+        })
+        
 
         $(window).scroll(function() {
             var subtraction = $(document).height() - $(window).height();
