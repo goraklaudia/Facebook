@@ -10,12 +10,10 @@ export class Post {
                 $(data).each(function (index, value) {
                     let result = Mustache.render(template, value);
                     $('.container').append(result);
-                    console.log("render - " + $('.container').height());
                 });
                 resolve($('.container').height());
             }); 
         }).then((value) => {
-            console.log("render 2 - " + value);
             return value;
         });
     };
@@ -34,6 +32,5 @@ export class Post {
         }).then((data) =>{
             return this.containerHeight = this.render([data[0], data[1]]);
         });
-        // return this.containerHeight;
     }
 };
