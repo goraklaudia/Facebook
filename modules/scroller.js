@@ -7,18 +7,18 @@ export class Scroller {
         this.containerHei = 0;
     }
 
-    containerHeightCheck(containerHeight) {
+    fillingContainerWithPosts(containerHeight) {
         this.post.get().then((data) => {
             if(data < $(window).height())
             {
                 containerHeight = data;
-                this.containerHeightCheck(containerHeight);
+                this.fillingContainerWithPosts(containerHeight);
             }   
         });
     }
 
     loadPost() {
-        this.containerHeightCheck(this.containerHei);
+        this.fillingContainerWithPosts(this.containerHei);
 
         $(window).scroll(() =>{
             var subtraction = $(document).height() - $(window).height();
