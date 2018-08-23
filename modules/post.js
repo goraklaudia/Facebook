@@ -5,21 +5,24 @@ export class Post {
     }
 
     render(data) {
-        return new Promise((resolve, reject) => {
-            $.get('/templates/postTemplate.mst', function(template){
-                $(data).each(function (index, value) {
+        return new Promise((res, rej)=> {
+            new Promise((resolve, reject) => {
+                fetch('/templates/postTemplate.mst')
+                .then(response => {
+                    resolve(response.text());
+                });
+            }).then((template) => {
+                Mustache.parse(template);
+                $(data).each((index, value) =>  {
                     let result = Mustache.render(template, value);
                     $('.container').append(result);
                 });
-                resolve($('.container').height());
-            }); 
-        }).then((value) => {
-            return value;
+                res($('.container').height());
+            });
         });
     };
 
     get() {
-        
         return new Promise((resolve, reject) => {
             $.ajax({
                 url: 'https://jsonplaceholder.typicode.com/posts',
