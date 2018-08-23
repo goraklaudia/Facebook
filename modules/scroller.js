@@ -12,13 +12,13 @@ export class Scroller {
             if(data < $(window).height())
             {
                 containerHeight = data;
-                this.recursion(containerHeight);
+                this.containerHeightCheck(containerHeight);
             }   
         });
     }
 
     loadPost() {
-        this.recursion(this.containerHei);
+        this.containerHeightCheck(this.containerHei);
 
         $(window).scroll(() =>{
             var subtraction = $(document).height() - $(window).height();
