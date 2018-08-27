@@ -12,15 +12,12 @@ export class Post {
         })
         .then((template) => {
             Mustache.parse(template);
-            $(data).each((index, value) =>  {
+            $(data).each(function(index, value)  {
                 let result = Mustache.render(template, value);
                 let colors = ["deeppink", "blue"];
-                console.log(index);
-                if(index % 2 == 0)
-                     $('li').find('.'+ (index+1)).css('color', colors[index%2])
-                else if(index % 2 == 1)
-                    $('li').find('.'+ (index+1)).css('color', colors[index%2])
+
                 $('.container').append(result);
+                
             });
             return $('.container').height();
         });
