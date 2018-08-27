@@ -14,7 +14,6 @@ export class Post {
             Mustache.parse(template);
             $(data).each(function(index, value)  {
                 let result = Mustache.render(template, value);
-                let colors = ["deeppink", "blue"];
 
                 $('.container').append(result);
                 
