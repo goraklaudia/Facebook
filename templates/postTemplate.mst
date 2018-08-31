@@ -1,5 +1,5 @@
 {{#title}}
-    <li>
+    <li class="{{{id}}}">
         <div class="postTitle"> {{title}} </div>
         {{body}}
     </li>
